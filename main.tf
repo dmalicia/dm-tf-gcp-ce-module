@@ -23,3 +23,4 @@ metadata_startup_script = file("${var.scbootstrap}/puppet.sh")
  network_interface {
    network = "default"
 }
+}
