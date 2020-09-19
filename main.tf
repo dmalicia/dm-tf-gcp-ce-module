@@ -17,11 +17,6 @@ metadata_startup_script = file("${var.scbootstrap}/puppet.sh")
 
  network_interface {
    network = "default"
-
-   access_config {
-     nat_ip = google_compute_address.static[count.index].address
-   }
- }
 }
 
 resource "google_compute_firewall" "frontend" {
