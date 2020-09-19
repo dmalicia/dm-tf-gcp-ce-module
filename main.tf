@@ -23,14 +23,3 @@ metadata_startup_script = file("${var.scbootstrap}/puppet.sh")
  network_interface {
    network = "default"
 }
-
-resource "google_compute_firewall" "frontend" {
- name    = "frontend-firewall"
- network = "default"
-
- allow {
-   protocol = "tcp"
-   ports    = ["80","8140"]
- }
-}
-}
