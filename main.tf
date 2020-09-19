@@ -28,3 +28,4 @@ resource "google_compute_firewall" "frontend" {
    ports    = ["80","8140"]
  }
 }
+}
