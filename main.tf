@@ -1,3 +1,8 @@
+// Terraform plugin for creating random ids
+resource "random_id" "instance_id" {
+ byte_length = 8
+}
+
 resource "google_compute_instance" "frontend" {
  count        = length(var.gcp_zones) 
  name         = "dmlc-frontend-${random_id.instance_id.hex}"
