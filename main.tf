@@ -1,5 +1,5 @@
 resource "google_compute_instance" "frontend" {
- count        = lenght(var.gcp_zones) 
+ count        = length(var.gcp_zones) 
  name         = "dmlc-frontend-${random_id.instance_id.hex}"
  machine_type = "f1-micro"
  zone         = var.gcp_zones
